@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-serializer = "*"
+xhtml2pdf = "*"
+psycopg2-binary = "*"
+djangorestframework = "*"
+Django = "*"
+gunicorn = "*"
+twilio = "*"
+django-cors-headers = "*"
+django-heroku = "*"
+django-phonenumber-field = "*"
+django-sendsms = "*"
+django-twilio = "*"
+email-validator = "*"
+decorator = "*"
+html5lib = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "2.7"
