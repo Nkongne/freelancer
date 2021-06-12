@@ -28,14 +28,9 @@ from rest_framework.renderers import JSONOpenAPIRenderer
 schema_view = get_schema_view(title='Server Monitoring API',url='http://0.0.0.0:8000/api/',renderer_classes=[JSONOpenAPIRenderer])
 
 urlpatterns = [
-    path('openapi', get_schema_view(title="freelancer",description="API for all things …",version="1.0.0" ), name='openapi-schema'),
+    path('', include('apps.social.url')),
 
     path('admin/', admin.site.urls),
 
-    re_path(r'^api/freelancer/$', views.freelancer_list),
-    re_path(r'^api/freelancer/?P[0-9]+$', views.freelancer_detail),
-    re_path(r'^api/post/$', views.post_list),
-    re_path(r'^api/post/?P[0-9]+$', views.post_detail),
-    re_path(r'^api/comment/$', views.comment_list),
-    re_path(r'^api/comment/?P[0-9]+$', views.comment_detail),
+
 ]

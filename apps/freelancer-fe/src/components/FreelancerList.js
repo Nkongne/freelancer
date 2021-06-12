@@ -9,6 +9,8 @@ class FreelancerList extends Component {
   render() {
     const freelancers = this.props.freelancers;
     return (
+
+
       <Table dark>
         <thead>
           <tr>
@@ -44,7 +46,7 @@ class FreelancerList extends Component {
                 <td align="center">
                   <NewFreelancerModal
                     create={false}
-                    freelancer={freelancer}
+                    freelancers={freelancers}
                     resetState={this.props.resetState}
                   />
                   &nbsp;&nbsp;

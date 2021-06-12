@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.social',
     'rest_framework',
-    'corsheaders',
-    'apps.social'
+    'corsheaders'
+
 
 ]
 
@@ -151,3 +152,8 @@ EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
+
+CORS_ORIGIN_WHITELIST = ['https://localhost:3000']
+
+CORS_ORIGIN_ALLOW_ALL = True
+

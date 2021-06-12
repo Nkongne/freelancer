@@ -17,7 +17,7 @@ class Freelancer(models.Model):
     picture = models.ImageField(upload_to='uploads/', blank=True, null=True)
     qualification = models.CharField( max_length=255)
     registrationDate= models.DateTimeField(auto_now_add=True)
-    create_by = models.OneToOneField(User, related_name='vendor', on_delete=models.CASCADE)
+    create_by = models.ForeignKey(User, related_name='mentor', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

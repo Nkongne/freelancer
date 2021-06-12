@@ -10,14 +10,26 @@ class Header extends Component {
           className="img-thumbnail"
           style={{ marginTop: "20px" }}
         />
-        <hr />
-        <h5>
-          <i>presents</i>
-        </h5>
-        <h1>App with React + Django</h1>
+       <div className="notificationsFrame">
+                <div className="panel">
+                    <div className="header">
+                        <div className="menuIcon">
+                            <div className="dashTop"></div>
+                            <div className="dashBottom"></div>
+                            <div className="circle"></div>
+                        </div>
+                        <span className="title"></span>
+                        {this.props.title}
+                        <input type="text" className="searchInput" placeholder="Search ..."/>
+                        <div className="fa fa-search searchIcon"></div>
+                    </div>
+                </div>
+       </div>
       </div>
     );
   }
 }
+
+
 
 export default Header;

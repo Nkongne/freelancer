@@ -1,11 +1,22 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework import status
-
+from rest_framework import status, viewsets
 
 from .models import Freelancer
 from .serialisers import *
 
+class FreelancerViewSet(viewsets.ModelViewSet):
+    queryset=Freelancer.objects.all().order_by('name')
+    serializer_class = FreelancerSerializer
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset=Post.objects.all().order_by('title')
+    serializer_class = PostSerializer
+
+
+class CommentViewSet(viewsets.ModelViewSet):
+    queryset=Comment.objects.all().order_by('message')
+    serializer_class = CommentSerializer
 
 @api_view(['GET', 'POST'])
 def freelancer_list(request):

@@ -72,10 +72,10 @@ class NewFreelancerForm extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="document">Programming Language:</Label>
+          <Label for="programming_languages">Programming Languages:</Label>
           <Input
-            type="text"
-            name="document"
+            type="select"
+            name="pl"
             onChange={this.onChange}
             value={this.defaultIfEmpty(this.state.programming_languages)}
           />
@@ -92,19 +92,19 @@ class NewFreelancerForm extends React.Component {
 
 
           <FormGroup>
-          <Label for="phone">Profile Picture:</Label>
+          <Label for="picture">Profile Picture:</Label>
           <Input
-            type="text"
-            name="phone"
+            type="image"
+            name="picture"
             onChange={this.onChange}
             value={this.defaultIfEmpty(this.state.picture)}
           />
         </FormGroup>
           <FormGroup>
-          <Label for="phone">CV or portofolio:</Label>
+          <Label for="qualification">CV or portofolio:</Label>
           <Input
             type="text"
-            name="phone"
+            name="qualification"
             onChange={this.onChange}
             value={this.defaultIfEmpty(this.state.qualification)}
           />
