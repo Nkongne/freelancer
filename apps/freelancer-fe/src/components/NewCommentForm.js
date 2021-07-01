@@ -78,7 +78,7 @@ class NewCommentForm extends React.Component {
         </FormGroup>
 
 
-        <Button>Send</Button>
+        <Button type={"submit"}>Send</Button>
       </Form>
     );
   }

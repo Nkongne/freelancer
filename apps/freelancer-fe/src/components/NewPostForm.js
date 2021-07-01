@@ -50,7 +50,7 @@ class NewPostForm extends React.Component {
 
   render() {
     return (
-      <Form onSubmit={this.props.comment? this.editPost : this.createPost}>
+      <Form onSubmit={this.props.post? this.editPost : this.createPost}>
         <FormGroup>
           <Label for="message">Title:</Label>
           <Input
@@ -83,13 +83,13 @@ class NewPostForm extends React.Component {
           <Input
             type="select"
             name="freelancer"
-            onChange={this.onChange}
+            onChange={this.onChange.bind(this)}
             value={this.defaultIfEmpty(this.state.freelancer)}
           />
         </FormGroup>
 
 
-        <Button>Send</Button>
+        <Button type={"submit"}>Send</Button>
       </Form>
     );
   }

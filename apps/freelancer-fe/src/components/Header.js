@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import Style from "./style";
+
+
 
 class Header extends Component {
   render() {
     return (
-      <div className="text-center">
+
+
+      <div  className="text-center">
+
         <img
           src="https://logrocket-assets.io/img/logo.png"
           width="300"
@@ -25,6 +31,7 @@ class Header extends Component {
                     </div>
                 </div>
        </div>
+
       </div>
     );
   }

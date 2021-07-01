@@ -6,6 +6,7 @@ import NewCommentModal from "./NewCommentModal";
 import axios from "axios";
 import { API_URL} from "../constants";
 import { API_URL1} from "../constants";
+import { API_URL2} from "../constants";
 import CommentList from "./CommentList";
 import PostList from "./PostList";
 import NewPostModal from "./NewPostModal";
@@ -25,13 +26,13 @@ class Home extends Component {
     axios.get(API_URL).then(res => this.setState({ freelancers: res.data }));
   };
 
-    getComments = () => {
+  getComments = () => {
     axios.get(API_URL1).then(res => this.setState({ comments: res.data }));
   };
 
 
-getPosts = () => {
-    axios.get(API_URL1).then(res => this.setState({ posts: res.data }));
+    getPosts = () => {
+    axios.get(API_URL2 ).then(res => this.setState({ posts: res.data }));
   };
 
 

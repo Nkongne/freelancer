@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
 import NewFreelancerModal from "./NewFreelancerModal";
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import ConfirmRemovalModal from "./ConfirmRemovalModal";
 
 
@@ -60,6 +60,7 @@ class FreelancerList extends Component {
           )}
         </tbody>
       </Table>
+       
     );
   }
 }

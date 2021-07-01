@@ -33,7 +33,7 @@ class CommentList extends Component {
               <tr key={comment.pk}>
                 <td>{comment.message}</td>
                 <td>{comment.image}</td>
-
+                <td>{comment.freelancer}</td>
                 <td align="center">
                   <NewCommentModal
                     create={false}

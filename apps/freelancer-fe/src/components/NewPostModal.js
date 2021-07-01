@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
-import NewCommentForm from "./NewCommentForm";
+
 import NewPostForm from "./NewPostForm";
 
 
